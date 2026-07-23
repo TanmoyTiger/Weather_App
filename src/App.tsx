@@ -139,9 +139,9 @@ export default function App() {
 
   return (
     <ErrorBoundary>
-      <div className="min-h-screen bg-zinc-950 text-zinc-50 dark font-sans selection:bg-indigo-500 selection:text-white">
+      <div className="min-h-screen bg-zinc-950 text-zinc-50 dark font-sans selection:bg-indigo-500 selection:text-white flex flex-col justify-center">
         {/* Main Dashboard Container */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">
+        <div className="w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">
           {/* Header Bar */}
           <SearchHeader
             onSelectLocation={(loc) => fetchWeather(loc)}
@@ -177,7 +177,7 @@ export default function App() {
           {isLoading ? (
             <LoadingSkeleton />
           ) : weatherData ? (
-            <main className="grid grid-cols-1 lg:grid-cols-[1fr_340px] gap-6 items-stretch">
+            <main className="grid grid-cols-1 lg:grid-cols-[1fr_340px] gap-6 items-start">
               {/* Left Column: Hero */}
               <CurrentWeather data={weatherData} units={units} />
 
